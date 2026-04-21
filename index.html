@@ -143,6 +143,11 @@
       <div class="kpi-value">$13.4M</div>
       <div class="kpi-sub">7,392 lines · 13.3% of book</div>
     </div>
+    <div class="kpi-card" style="background:var(--surface);border:1px solid #7c3aed44">
+      <div class="kpi-label">Due Today</div>
+      <div class="kpi-value" style="color:#a855f7">$267K</div>
+      <div class="kpi-sub">223 lines · 0.3% of book</div>
+    </div>
     <div class="kpi-card amber">
       <div class="kpi-label">Due Next 90 Days</div>
       <div class="kpi-value">$27.8M</div>
@@ -150,8 +155,8 @@
     </div>
     <div class="kpi-card green">
       <div class="kpi-label">Future (90+ Days)</div>
-      <div class="kpi-value">$59.3M</div>
-      <div class="kpi-sub">14,974 lines · 59.0% of book</div>
+      <div class="kpi-value">$59.0M</div>
+      <div class="kpi-sub">14,751 lines · 58.7% of book</div>
     </div>
   </div>
 
@@ -288,7 +293,7 @@
 <script>
 // ===================== DATA =====================
 const DATA = {
-  kpis: {"total_book_value":100481564.06,"total_lines":31580,"total_past_due_value":13368615.43,"total_past_due_lines":7392,"total_due_90_value":27831081.27,"total_due_90_lines":9214},
+  kpis: {"total_book_value":100481564.06,"total_lines":31580,"total_past_due_value":13368615.43,"total_past_due_lines":7392,"total_today_value":267114.30,"total_today_lines":223,"total_due_90_value":27831081.27,"total_due_90_lines":9214,"total_future_lines":14751},
   func_data: [{"ActionBy - New":"SUPPLY CHAIN","lines":12576,"value":48373772.51,"pct":48.14},{"ActionBy - New":"OPS","lines":10706,"value":19811399.20,"pct":19.72},{"ActionBy - New":"QA","lines":3852,"value":16921483.47,"pct":16.84},{"ActionBy - New":"P&E","lines":4029,"value":14157063.09,"pct":14.09},{"ActionBy - New":"SALES","lines":258,"value":775340.98,"pct":0.77},{"ActionBy - New":"CPM","lines":78,"value":230479.11,"pct":0.23},{"ActionBy - New":"SPS RISK","lines":55,"value":188334.77,"pct":0.19},{"ActionBy - New":"GTS","lines":19,"value":10559.53,"pct":0.01},{"ActionBy - New":"EHS","lines":5,"value":8202.44,"pct":0.01},{"ActionBy - New":"FINANCE","lines":2,"value":4928.96,"pct":0.00}],
   site_data: [{"Whse Site":"Chandler","value":82970921.22,"pct":82.57},{"Whse Site":"Miami","value":15417522.43,"pct":15.34},{"Whse Site":"Burgess Hill","value":428094.06,"pct":0.43},{"Whse Site":"Norderstedt","value":93160.68,"pct":0.09},{"Whse Site":"Wichita","value":49917.85,"pct":0.05},{"Whse Site":"Henstedt-Ulzburg","value":11602.88,"pct":0.01},{"Whse Site":"Coppell","value":9789.96,"pct":0.01},{"Whse Site":"Senlis CEDEX","value":5073.29,"pct":0.01},{"Whse Site":"O Fallon","value":3720.26,"pct":0.00},{"Whse Site":"Zaczernie","value":1723.72,"pct":0.00},{"Whse Site":"Singapore","value":1565.98,"pct":0.00},{"Whse Site":"Hialeah Gardens","value":299.69,"pct":0.00},{"Whse Site":"Enfield","value":238.00,"pct":0.00},{"Whse Site":"Toulouse","value":122.00,"pct":0.00},{"Whse Site":"Miami Lakes","value":50.16,"pct":0.00},{"Whse Site":"Swidnik","value":18.20,"pct":0.00}],
   exec_data: [{"Execution Person":"Dianne Ballard","lines":3863,"value":26808994.77,"past_due_value":1978236.72,"due_90_value":7694432.69,"pct":26.68},{"Execution Person":"ROBYN DAWSON","lines":2904,"value":15802609.59,"past_due_value":2487363.07,"due_90_value":4609270.01,"pct":15.73},{"Execution Person":"Seraya Brokaw","lines":764,"value":9507831.01,"past_due_value":1237069.23,"due_90_value":3178004.38,"pct":9.46},{"Execution Person":"Brianna Castro-Garza","lines":6103,"value":9215051.67,"past_due_value":1564320.05,"due_90_value":2843216.62,"pct":9.17},{"Execution Person":"Danielle Nyhof","lines":1031,"value":8930860.94,"past_due_value":743082.87,"due_90_value":2564432.05,"pct":8.89},{"Execution Person":"Arturo Soto Fimbres","lines":4293,"value":8653063.40,"past_due_value":1698063.31,"due_90_value":2243698.55,"pct":8.61},{"Execution Person":"Dawn Low","lines":4851,"value":7635923.29,"past_due_value":1329413.16,"due_90_value":2341856.65,"pct":7.60},{"Execution Person":"Denise Rodriguez","lines":2276,"value":4749944.08,"past_due_value":801264.01,"due_90_value":1634285.77,"pct":4.73},{"Execution Person":"Geraldine-Amelie Schuessler","lines":1671,"value":4683105.40,"past_due_value":136267.61,"due_90_value":1247430.52,"pct":4.66},{"Execution Person":"Anastasiia Sokolova","lines":1279,"value":3158803.23,"past_due_value":348706.41,"due_90_value":991044.93,"pct":3.14},{"Execution Person":"Kevin Hergenrader","lines":957,"value":992196.48,"past_due_value":46028.99,"due_90_value":347359.11,"pct":0.99},{"Execution Person":"Xiaobo Yang","lines":1481,"value":970175.70,"past_due_value":100760.38,"due_90_value":295310.88,"pct":0.97},{"Execution Person":"Lisa Timm","lines":54,"value":213174.00,"past_due_value":0.0,"due_90_value":156464.00,"pct":0.21},{"Execution Person":"Robert J. Cadena","lines":23,"value":99413.50,"past_due_value":0.0,"due_90_value":13414.50,"pct":0.10},{"Execution Person":"Jeff Watson","lines":19,"value":16430.20,"past_due_value":0.0,"due_90_value":6450.20,"pct":0.02},{"Execution Person":"Olivier Bardoux","lines":8,"value":4483.60,"past_due_value":0.0,"due_90_value":1300.80,"pct":0.00},{"Execution Person":"Robyn Dawson","lines":3,"value":4063.20,"past_due_value":0.0,"due_90_value":2900.60,"pct":0.00}],
@@ -306,21 +311,31 @@ const COLORS = ['#4f6ef7','#7c5cbf','#22c55e','#f59e0b','#ef4444','#06b6d4','#ec
 function buildOverviewCharts() {
   // Bucket chart
   const total = DATA.kpis.total_book_value;
-  const future = total - DATA.kpis.total_past_due_value - DATA.kpis.total_due_90_value;
+  const future = total - DATA.kpis.total_past_due_value - DATA.kpis.total_due_90_value - DATA.kpis.total_today_value;
   new Chart(document.getElementById('bucketChart'), {
     type: 'bar',
     data: {
-      labels: ['Past Due','Due ≤90 Days','Future (90+ Days)'],
+      labels: ['Past Due', 'Due Today', 'Due ≤90 Days', 'Future (90+ Days)'],
       datasets: [{
-        data: [DATA.kpis.total_past_due_value, DATA.kpis.total_due_90_value, future],
-        backgroundColor: ['#ef4444','#f59e0b','#22c55e'],
+        data: [DATA.kpis.total_past_due_value, DATA.kpis.total_today_value, DATA.kpis.total_due_90_value, future],
+        backgroundColor: ['#ef4444', '#a855f7', '#f59e0b', '#22c55e'],
         borderRadius: 6,
         borderSkipped: false
       }]
     },
     options: {
       responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => fmt(ctx.parsed.y) } } },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => {
+              const lines = [DATA.kpis.total_past_due_lines, DATA.kpis.total_today_lines, DATA.kpis.total_due_90_lines, DATA.kpis.total_future_lines][ctx.dataIndex];
+              return [fmt(ctx.parsed.y), fmtNum(lines) + ' lines'];
+            }
+          }
+        }
+      },
       scales: {
         x: { ticks: { color: '#94a3b8' }, grid: { color: '#2e3350' } },
         y: { ticks: { color: '#94a3b8', callback: v => fmt(v) }, grid: { color: '#2e3350' } }
