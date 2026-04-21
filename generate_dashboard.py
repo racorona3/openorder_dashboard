@@ -93,10 +93,18 @@ def calculate(df):
     next_90 = today + pd.Timedelta(days=90)
 
     df = df.copy()
-    df["_past_due"] = df[COL_SHIP_DATE] < today
-    df["_today"]    = df[COL_STATUS].astype(str).str.strip().str.upper() == "TODAY"
-    df["_due_90"]   = (df[COL_SHIP_DATE] >= today) & (df[COL_SHIP_DATE] <= next_90)
-    df["_future"]   = df[COL_SHIP_DATE] > next_90
+    # Use the Status column as the source of truth for Past Due and Today --
+    # these are pre-calculated by the source system and match your report exactly.
+    # Ship Request Date alone over-counts because some "Future" rows have past dates.
+    df["_past_due"] = df[COL_STATUS].astype(str).str.strip() == "Past Due"
+    df["_today"]    = df[COL_STATUS].astype(str).str.strip() == "Today"
+    # 90-day bucket: ship date within range, but not already flagged Past Due or Today
+    df["_due_90"]   = (
+        ~df["_past_due"] & ~df["_today"] &
+        (df[COL_SHIP_DATE] >= today) &
+        (df[COL_SHIP_DATE] <= next_90)
+    )
+    df["_future"]   = ~df["_past_due"] & ~df["_today"] & ~df["_due_90"]
 
     total_val = df[COL_EXT_PRICE].sum()
 
